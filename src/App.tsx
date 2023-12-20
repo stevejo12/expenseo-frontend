@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import { RouterProvider } from 'react-router-dom';
+import Routes from './routes/routes';
+
 import './App.css';
 
+// https://www.behance.net/gallery/162192067/Expense-Management-SaaS-Software-Design-Admin-Portal?tracking_source=search_projects%7CExpense+app
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <RouterProvider router={Routes} />
     </div>
   );
 }

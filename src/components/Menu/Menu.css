@@ -1,0 +1,99 @@
+.menu-mobileSidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid black;
+}
+
+.menu-mobileSidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.menu-logo {
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.menu-companyName {
+  font-size: 1.5rem;
+  margin-left: 0.875rem;
+  font-weight: bold;
+  color: rgb(9,204,106);
+}
+
+.menu-options-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: rgb(108,118,138);
+}
+
+.menu-topOptions, .menu-bottomOptions {
+  margin: 2rem 0;
+}
+
+.menu-bottomOptions {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-list:hover {
+  background: rgba(9,204,106,0.05);
+  color: rgb(9,204,106);
+  cursor: pointer;
+}
+
+.menu-list > span {
+  padding-left: 10px;
+  font-size: 21px;
+}
+
+.menu-userInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.menu-userImage {
+  width: 50px;
+}
+
+.menu-userImage > img {
+  width: 100%;
+  border-radius: 9999px;
+}
+
+.menu-userData {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.625rem;
+  flex: 1;
+}
+
+.menu-userName {
+  color: black;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.menu-userEmail {
+  font-size: 0.8rem;
+}
+
+.menu-userArrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
