@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: right;
+  border-bottom: 1px solid black;
+}
+
+.home-header > * {
+  margin: 0 10px;
+}
+
+.home-optionSelect {
+  font-size: 1.25rem;
+  padding: 3px;
+}
+
+.separator {
+  width: 1px;
+  background-color: grey;
+  height: 100%;
+}
+
+.home-header-userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid black;
+}
