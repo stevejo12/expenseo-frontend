@@ -39,3 +39,13 @@
   border-radius: 9999px;
   border: 1px solid black;
 }
+
+.home-main {
+  padding: 20px;
+}
+
+.home-expensesCard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); 
+}

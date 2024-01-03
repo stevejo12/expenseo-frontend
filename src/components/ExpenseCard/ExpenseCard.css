@@ -1,0 +1,54 @@
+.expenseCard-container {
+  position: relative;
+  border: 0.5px solid black;
+  padding: 10px;
+}
+
+.expenseCard-logoContainer {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 9999px;
+  background-color: rgba(245, 245, 245, 0.8);
+  color: rgb(9,204,106);
+}
+
+.expenseCard-detail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.expenseCard-title {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.expenseCard-title-text {
+  color: rgb(169,169,169);
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.expenseCard-title-amount {
+  font-size: 1.25rem;
+  padding-bottom: 5px;
+}
+
+.expenseCard-footer {
+  display: flex;
+  align-items: center;
+}
+
+.expenseCard-footer-arrowUp {
+  color: rgb(9,204,106);
+}
+
+.expenseCard-footer-arrowDown {
+  color: rgb(244,77,66);
+}
+
+.expenseCard-footer > span {
+  font-size: 0.875rem;
+  margin-left: 5px;
+}
