@@ -12,40 +12,33 @@
 
 .home-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 20px;
-  justify-content: right;
-  border-bottom: 1px solid black;
+  font-size: 1.75rem;
 }
 
-.home-header > * {
-  margin: 0 10px;
+.home-userBalance {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
 }
 
-.home-optionSelect {
-  font-size: 1.25rem;
-  padding: 3px;
+.home-userBalance > svg {
+  margin-left: 3px;
+  cursor: pointer;
 }
 
-.separator {
-  width: 1px;
-  background-color: grey;
-  height: 100%;
+.home-userBalanceInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.home-header-userAvatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 9999px;
-  border: 1px solid black;
+.home-userBalanceInfo > svg {
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .home-main {
-  padding: 20px;
-}
-
-.home-expensesCard {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr); 
+  /* font-size: 1.5rem; */
 }
