@@ -4,17 +4,67 @@
 }
 
 .home-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
 }
 
-.home-header {
+.home-content-left {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+}
+
+.home-left-header {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.home-header-left {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.home-header-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.home-header-balanceInfo {
   padding: 20px;
-  font-size: 1.75rem;
+  background-color: rgba(9,204,106, 0.7);
+  border-radius: 10px;
+  display: flex;
+}
+
+.home-header-balanceInfo-left {
+  margin-right: 50px;
+}
+
+.home-left-expenseTableContainer {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.home-left-expenseoTableTitle {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.home-left-chart {
+  display: flex;
+  flex: 1;
 }
 
 .home-userBalance {
@@ -37,8 +87,4 @@
 .home-userBalanceInfo > svg {
   margin-left: 5px;
   cursor: pointer;
-}
-
-.home-main {
-  /* font-size: 1.5rem; */
 }

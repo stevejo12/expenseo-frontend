@@ -24,3 +24,8 @@ code {
 .expenseo-border-full {
   border-radius: var(--expenseo-border-full);
 }
+
+.expenseo-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
