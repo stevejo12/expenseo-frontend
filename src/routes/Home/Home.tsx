@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
-import { BiHide, BiShow } from "react-icons/bi";
+import { BiHide, BiShow, BiSearch } from "react-icons/bi";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { IoMailUnreadOutline, IoNotificationsOutline } from "react-icons/io5";
 import { Chart } from "react-google-charts";
-import { ExpensesAmount } from "../../models/expense";
 import Menu from "../../components/Menu/Menu";
 import { useCurrency } from "../../context/currency";
 
@@ -22,11 +23,6 @@ const Home = () => {
     ["Other Expenses", 300000],
     ["Transportation", 113400],
     ["Houseware", 61000],
-    // ["", 0],
-    // ["", 0],
-    // ["", 0],
-    // ["", 0],
-    // ["", 0],
   ]);
   const [expensePieChart, setExpensePieChart] = useState<((string|number)[])[]>([
     ["Element", "Amount"],
@@ -34,7 +30,7 @@ const Home = () => {
     ["Expense", 829400],
     ["Savings", 3055000],
   ]);
-  const chartLegend = ["Element", "Density"]
+  const [profilePicture, setProfilePicture] = useState<string>("https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 
   return (
     <div className="home">
@@ -66,17 +62,54 @@ const Home = () => {
               <HiOutlineDotsHorizontal />
             </div>
           </div>
-          {/* <div className="home-left-expenseTable"></div> */}
           <div className="home-left-expenseTableContainer">
             <span className="expenseo-title home-left-expenseoTableTitle">Top 5 Expenses</span>
-            <Chart chartType="ColumnChart" data={expensesTable} width="100%" height="100%" className="home-left-chart" />
+            <Chart 
+              chartType="ColumnChart" 
+              data={expensesTable} 
+              width="100%" 
+              height="100%" 
+              className="home-left-chart" 
+            />
           </div>
           <div className="home-left-expenseTableContainer">
             <span className="expenseo-title home-left-expenseoTableTitle">Report Overview</span>
-            <Chart chartType="PieChart" data={expensePieChart} width="100%" height="100%" className="home-left-chart" options={{ is3D: false, pieHole: 0.4}} />
+            <Chart 
+              chartType="PieChart" 
+              data={expensePieChart} 
+              width="100%" 
+              height="100%" 
+              className="home-left-chart" 
+              options={{ is3D: false, pieHole: 0.4}} 
+            />
           </div>
         </div>
-        <div className="home-content-right"></div>
+        <div className="home-content-right">
+          <div className="home-right-header">
+            <div className="home-right-header-iconsContainer">
+              <div className="home-right-header-icon">
+                <BiSearch fontSize={24} />
+              </div>
+              <div className="home-right-header-icon">
+                <IoMailUnreadOutline fontSize={24} />
+              </div>
+              <div className="home-right-header-icon">
+                <IoNotificationsOutline fontSize={24} />
+              </div>
+            </div>
+            <div className="home-header-userInfoContainer">
+              <div className="home-header-userName">
+                <span>Addie Bradford</span>
+                <MdOutlineKeyboardArrowDown fontSize={24} style={{ cursor: "pointer"}} />
+              </div>
+              <img 
+                src={profilePicture} 
+                alt="" 
+                className="home-header-userProfilePicture expenseo-border-full" 
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
